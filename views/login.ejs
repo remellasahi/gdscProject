@@ -1,0 +1,266 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Login Form</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1544631008-534b4b6c1215?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1853&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(1, 1, 1, 0.8);
+  border: solid black;
+
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+  border-radius: 10em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 45px;
+}
+
+.submit-container {
+  text-align: center;
+}
+
+button {
+  background: #a8c0ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1f105f, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+.logbtn{
+  position: absolute;
+  left: 94%;
+  bottom: 94%;
+}
+.signbtn{
+  position: absolute;
+  left: 87%;
+  bottom: 94%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+a:visited { 
+ text-decoration: none; 
+ color: white; 
+}
+
+  </style>
+</head>
+<body>
+  <button class="signbtn" type="submit"><a style="text-decoration: none;" href="/">Sign Up</a></button>
+  <button class="logbtn" type="submit"><a style="text-decoration: none;"href="/login">Login</a></button></span>
+  <div class="container">
+    <form action="/loginsubmit" method="GET">
+      <h2>Login Form</h2>
+      <div class="input-container">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email">
+      </div>
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password">
+      </div>
+      <div class="submit-container">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Login Form</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: wheat;
+  padding: 75px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(1, 1, 1, 0.8);
+  border: solid black;
+  position: absolute;
+  margin-right: 750px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+  border-radius: 10em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 45px;
+}
+
+.submit-container {
+  text-align: center;
+}
+
+button {
+  background: #a8c0ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1f105f, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+.logbtn{
+  position: absolute;
+  left: 94%;
+  bottom: 94%;
+  text-decoration:none;
+}
+.signbtn{
+  position: absolute;
+  left: 87%;
+  bottom: 94%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+a:visited { 
+ text-decoration: none; 
+ color: white; 
+}
+    .para1{
+      height: 320px;
+      width: 800px;
+      position: absolute;
+      margin-top: -220px;
+      margin-left: -135px;
+      font-weight: bold;
+      font-size: 45px;
+      color: white;
+    }
+        .para3{
+          height: 320px;
+          width: 400px;
+          position: absolute;
+          margin-top: -120px;
+          margin-left: 260px;
+          font-weight: bold;
+          font-size:20px;
+          color:white;
+        }
+
+  </style>
+</head>
+<body>
+  <button class="signbtn" type="submit"><a style="text-decoration: none;" href="/">Sign Up</a></button>
+  <button class="logbtn" type="submit"><a style="text-decoration: none;"href="/login">Login</a></button></span>
+  <div class="container">
+    <form action="/loginsubmit" method="GET">
+      <h2>Login Form</h2>
+      <div class="input-container">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email">
+      </div>
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password">
+      </div>
+      <div class="submit-container">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  <div class="para">
+    <span class="para1">"Happiness is when what you think, what you say, and what you do are in harmony."</span>
+  </div>
+  <div class="para2">
+    <span class="para3">-Steve Jobs</span>
+  </div>
+</body>
+</html>

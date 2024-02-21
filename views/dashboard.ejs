@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+        <style>
+            body{
+                margin:0px;
+                border:0px;
+                gap:6rem;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            #topbar{
+                display: flex;
+                flex-direction: row;
+                align-items:flex-end;
+                justify-content: space-between;
+
+            }
+            #lefttop{
+                display:flex;
+                flex-direction:row;
+                align-items:flex-end; 
+            }
+            #pre1, #span1{
+                font-size: large;
+                font-weight:bold;
+            }
+            #sidebar{
+                color:rgb(52, 47, 47);
+                background-color: white;
+                display:flex;;
+                flex-direction:column;
+                height:450px;
+                width:300px;
+                border-radius:5px;
+                box-shadow: 5px 5px 20px;
+            }
+            .divT{
+                display:flex;
+                flex-direction: row;
+                width:98vw;
+                height:max-content;
+                flex-wrap: wrap;
+                gap:5rem;
+                /*justify-content: flex-start;*/
+            }
+            a{
+                text-decoration: none;
+                color:rgb(52, 47, 47);
+            }
+            #span1{
+                cursor: pointer;
+            }
+           #bone,#btwo,#btre,#bfour,#bfive{
+                margin-top:10px;
+                height:100px;
+                width:210px;
+                display: flex;
+                flex-direction: column;
+                border: 1px black;
+                border-radius: 10px;
+                text-align: center;
+                justify-content: center;
+            }
+            #content{                
+                display:flex;
+                /*flex-direction:row;*/
+                gap:3rem;
+                flex-wrap: wrap;
+                width:750px;
+                height:200px;
+            }
+            #boxText{
+                color:white;
+                font-size: larger;
+            }
+            #cpre{
+                line-height: 1.5px;
+            }
+          #heads{
+            margin-bottom:-10px;
+          }
+          #time{
+            font-size: large;
+            margin-bottom:2%;
+
+            color:white;
+          }
+          #img1{
+            margin-right:500px;
+          }
+            /* @media screen and (max-width: 768px) {
+            #content {
+                width: 100%;
+            }
+
+            .divT {
+                flex-direction: column;
+            }
+
+            #sidebar {
+                width: 100%;
+            }
+
+            #topbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #lefttop {
+                margin-top: 10px;
+            }
+
+            #pre1 {
+                margin-bottom: 10px;
+            }
+
+            #bone,
+            #btwo,
+            #btre,
+            #bfour,
+            #bfive {
+                flex: 0 1 calc(50% - 20px);
+            }
+        } */
+        #alert{
+            margin-right:1100px;
+        }
+        #uesr{
+            margin-right:150px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+        <div id="topbar">
+          <h1 id="heads">RescueReach</h1>
+          <img id="alert" src="data:image/png;base64,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" id="img1" width="60px" height="60px">
+            <div id="lefttop">
+            <img id="uesr" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width="60px" height="60px">
+
+            </div>
+            </div>
+            <br>
+            <div class="divT">
+        <div style="margin-left:5px; margin-top: 8px;" id="sidebar">
+           <p>&nbsp;&nbsp;<i class="fa fa-dashboard" style="font-size:20px"></i>&nbsp; &nbsp;<span id="span1"><a href="">Dashboard</a></span></p>
+            <br>
+            <hr style="width:290px; float:left;margin-top:-15px;">
+            <p>&nbsp;&nbsp;<i class="fa fa-history" style="font-size:20px"></i>&nbsp;&nbsp;<span id="span1"><a href="">View History</a></span></p><!-- PREPARE A TABLE-->
+            <br>
+            <hr style="width:290px; float:left;margin-top:-15px;">
+            <p>&nbsp;&nbsp;<i class="fa-solid fa-pen-to-square" aria-hidden="true" style="font-size:20px"></i>&nbsp;&nbsp;<span id="span1"><a href="">Documentation</a></span></p> <!--PREPARE A DOOCUMETATION ROUTE-->
+            <br>
+            <hr style="width:290px; float:left;margin-top:-15px;">
+            <p>&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true" style="font-size:20px"></i>&nbsp;&nbsp;<span id="span1">Contact Us</span></p>
+            <br>
+            <hr style="width:290px; float:left;margin-top:-15px;">
+            <p>&nbsp;&nbsp;<i class="fa fa-sign-out" aria-hidden="true" style="font-size:20px"></i>&nbsp;&nbsp;<span id="span1"><a href="/admin/logout">Logout</a></span></p>
+            <br>
+            <hr style="width:290px; float:left;margin-top:-15px;">
+
+        </div>
+        <div id="content">
+            <div style="background-color:rgb(2, 2, 193);" id="bone">
+            <p id="boxText">RUNTIME</p>
+            <p id="time">12:21:45</p>
+            </div>
+            <div style="background-color:rgb(151, 103, 12);"id="btwo">
+                <a href="/report">BASIC REPORT</a>
+                </div>
+            <div style="background-color:green;"id="btre">
+            <a href="/hospital">MEDICAL FACILITIES</a>
+            </div>
+            <div style="background-color:rgb(229, 58, 58);"id="bfour">
+            <a href="/perf">PERFORMANCE</a>
+            </div>
+            </div>
+            <!-- <div style="background-color:rgb(2, 2, 193);"id="bfive">
+            <p id="boxText">Closed</p> -->
+
+            </div>
+        </div>
+        </div>
+          <!-- <footer>
+        <div id="contact">
+            <h5>Contact address</h5>
+            <pre id="cpre">email us at: rescuecomplaints@vishnu.edu.in</pre> -->
+            <!-- <pre id="cpre">visit us at: <i>student affairs Office, Block-A, VITB</i></pre>   -->
+        </center> 
+    </footer>     
+        </div>
+    </div>
+    </body>
+</html>

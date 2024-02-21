@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+    <form action="/report" method="get">
+      <center>
+  <h1>Custom Report</h1>
+  </center>
+  <table>
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Device Runtime</th>
+        <th>Accuracy</th>
+        <th>Precision</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SN001</td>
+        <td>8 hours</td>
+        <td>98%</td>
+        <td>0.97</td>
+      </tr>
+      <tr>
+        <td>SN002</td>
+        <td>12 hours</td>
+        <td>94%</td>
+        <td>0.92</td>
+      </tr>
+      <tr>
+        <td>SN003</td>
+        <td>10 hours</td>
+        <td>99%</td>
+        <td>0.98</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+
+</html>
